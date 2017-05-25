@@ -153,6 +153,12 @@ main, #messages-card {
   padding-right: 10px;
   padding-left: 20px;
 }
+.nav-menu {
+  font-size: 16px;
+  line-height: 36px;
+  padding-right: 10px;
+  padding-left: 20px;
+}
 #image-form #submitImage {
   width: auto;
   padding: 0 6px 0 1px;

@@ -59,15 +59,16 @@
   <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-        <h3><i class="material-icons">chat_bubble_outline</i> Friendly Chat</h3>
+        <h3>RunFiker Go!</h3>
       </div>
       <div id="user-container">
-        <div ng-click="mapView = !mapView">Map</div>
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
         <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
-          Sign-out
+          SignOut
         </button>
+        <div class="nav-menu">Erbjud</div>
+        <div class="nav-menu" ng-click="mapView = !mapView">Map</div>
         <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           <i class="material-icons">account_circle</i>Sign-in with Google
         </button>
@@ -87,7 +88,7 @@
           <div id="siteNotice"></div>
           <h2 id="firstHeading" class="firstHeading">Runfiker Go!</h2>
           <div id="bodyContent">
-            <p><b>Cornelia & Niklas!</b>, här kan vi lägga erbjudande. Till exempel <b>Indian special</b>, är asfult nu
+            <p><b>Cornelia & Niklas!</b> Här kan vi lägga erbjudande. Är asfult nu
               men detta kan vi fixa! ;)</p>
           </div>
         </div>
