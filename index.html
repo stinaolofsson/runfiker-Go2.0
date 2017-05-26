@@ -18,9 +18,9 @@
   <script src="ng-map.min.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Learn how to use the Firebase platform on the Web">
+  <meta name="description" content="TSM-RunFikerGo">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friendly Chat</title>
+  <title>RunFiker Go!</title>
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -30,13 +30,13 @@
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Friendly Chat">
-  <meta name="theme-color" content="#303F9F">
+  <meta name="application-name" content="RunFikerGo">
+  <meta name="theme-color" content="#4a90e2">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Friendly Chat">
+  <meta name="apple-mobile-web-app-title" content="RunFikerGo">
   <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
 
   <!-- Tile icon for Win8 -->
@@ -78,34 +78,56 @@
 
   <!-- Google Map -->
   <div id="map">
-    <ng-map id="map" center='current-position' style="height:100vh"
-      geo-fallback-center="[40.74, -74.18]"
-      geo-callback="vm.callbackFunc('you')"
-    >
-    <marker id="foo" position="current" on-click="map.showInfoWindow('bar')"></marker>
-      <info-window id="bar" visible-on-marker="foo">
-        <div ng-non-bindable>
-          <div id="siteNotice"></div>
-          <h2 id="firstHeading" class="firstHeading">Runfiker Go!</h2>
-          <div id="bodyContent">
-            <p><b>Cornelia & Niklas!</b> Här kan vi lägga erbjudande. Är asfult nu
-              men detta kan vi fixa! ;)</p>
-          </div>
+    <ng-map zoom="15" id="map" center='current-position' style="height:100vh">
+    <marker position="current" centered="true" icon="../images/icon-currentposition.png"></marker>
+    <marker id="MIT-fontain" icon="../images/icon-custommarker.png" position="63.820555, 20.305823" on-click="map.showInfoWindow(event, 'coffee')"></marker>
+    <info-window id="coffee">
+      <div ng-non-bindable>
+        <div id="siteNotice"></div>
+        <h2 id="firstHeading" class="firstHeading">Little Indian</h2>
+        <div id="bodyContent">
+          <p><b>15% on Coffee</b> Här kan vi lägga erbjudande. Är asfult nu
+            men detta kan vi fixa! ;)</p>
         </div>
-      </info-window>
-      <custom-marker ng-repeat="cm in customMarkers" position="{{cm.address}}"
-        on-mouseover="mouseover()" on-mouseout="mouseout()"
-        on-click="click()">
-        <div class="{{cm.class}}"><div> Custom Marker {{cm.class}}</div> </div>
-      </custom-marker>
-    </ng-map>
-    <!-- <ng-map zoom="13" center="1600 pennsylvania ave, washington DC" style="height:100vh">
-    <custom-marker ng-repeat="cm in customMarkers" position="{{cm.address}}"
+      </div>
+    </info-window>
+    <marker id="Fantastic Grill" icon="../images/icon-custommarker.png" position="63.818307, 20.308945" on-click="map.showInfoWindow(event, 'fries')"></marker>
+    <info-window id="fries">
+      <div ng-non-bindable>
+        <div id="siteNotice"></div>
+        <h3 id="firstHeading" class="firstHeading">Fantastic Grill</h3>
+        <div id="bodyContent">
+          <p><b>15% on Fries</b></p>
+        </div>
+      </div>
+    </info-window>
+    <marker id="IO" icon="../images/icon-custommarker.png" position="63.821065, 20.301896" on-click="map.showInfoWindow(event, 'delicato')"></marker>
+    <info-window id="delicato">
+      <div ng-non-bindable>
+        <div id="siteNotice"></div>
+        <h3 id="firstHeading" class="firstHeading">Delicato</h3>
+        <div id="bodyContent">
+          <p><b>15% on Delicato</b></p>
+        </div>
+      </div>
+    </info-window>
+    <marker id="AulaNordica" icon="../images/icon-custommarker.png" position="63.819806, 20.304790" on-click="map.showInfoWindow(event, 'ice-cream')"></marker>
+    <info-window id="ice-cream">
+      <div ng-non-bindable>
+        <div id="siteNotice"></div>
+        <h3 id="firstHeading" class="firstHeading">Ice-Cream</h3>
+        <div id="bodyContent">
+          <p><b>15% on Ice-cream</b></p>
+        </div>
+      </div>
+    </info-window>
+
+    <!-- <custom-marker ng-repeat="cm in customMarkers" position="current"
       on-mouseover="mouseover()" on-mouseout="mouseout()"
       on-click="click()">
       <div class="{{cm.class}}"><div> Custom Marker {{cm.class}}</div> </div>
-    </custom-marker>
-    </ng-map> -->
+    </custom-marker> -->
+    </ng-map>
   </div>
 
   <main ng-show="chatView" class="mdl-layout__content mdl-color--grey-100">
@@ -139,7 +161,6 @@
         <div class="mdl-snackbar__text"></div>
         <button class="mdl-snackbar__action" type="button"></button>
       </div>
-
     </div>
   </main>
 </div>

@@ -16,4 +16,4 @@ angular.module('myMap',['ngMap']).controller('MyCtrl', function(NgMap) {
       this.style.backgroundColor = 'white';
     };
     $scope.click = function() {console.log('click')};
-  });
+});
