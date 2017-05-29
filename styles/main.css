@@ -205,7 +205,7 @@ main, #messages-card {
 }
 .custom-marker {
 }
-.custom-marker.my1 {
+/*.custom-marker.my1 {
   font-size: 1.5em;
   padding: 10px;
   background: #fff;
@@ -213,9 +213,9 @@ main, #messages-card {
   -moz-border-radius: 4px;
   border-radius: 4px;
   border: #7F7F7F solid 1px;
-}
+}*/
 
-.custom-marker.my1:after {
+/*.custom-marker.my1:after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -227,9 +227,9 @@ main, #messages-card {
   margin-left: -6px;
   bottom: -6px;
   left: 50%;
-}
+}*/
 
-.custom-marker.my1:before {
+/*.custom-marker.my1:before {
   content: '';
   position: absolute;
   border-style: solid;
@@ -241,9 +241,9 @@ main, #messages-card {
   margin-left: -6px;
   bottom: -7px;
   left: 50%;
-}
+}*/
 
-.custom-marker.my2 {
+/*.custom-marker.my2 {
   font-size: 1.5em;
   padding: 10px;
   background: #fff;
@@ -252,9 +252,9 @@ main, #messages-card {
   border-radius: 4px;
   border: #7F7F7F solid 1px;
   background: red;
-}
+}*/
 
-.custom-marker.my2:after {
+/*.custom-marker.my2:after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -280,7 +280,7 @@ main, #messages-card {
   margin-left: -6px;
   bottom: -7px;
   left: 50%;
-}
+}*/
 .map{
   height: 100%;
   width: 100%;
