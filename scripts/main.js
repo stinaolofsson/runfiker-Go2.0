@@ -63,17 +63,6 @@ FriendlyChat.prototype.initFirebase = function() {
   this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
 };
 
-var db = firebase.database();
-var ref = db.ref("https://runfiker-go-e7063.firebaseio.com/");
-
-// Retrieve new posts as they are added to our database
-ref.on("child_added", function(snapshot, prevChildKey) {
-  var newPost = snapshot.val();
-  console.log("Author: " + newPost.author);
-  console.log("Title: " + newPost.title);
-  console.log("Previous Post ID: " + prevChildKey);
-});
-
 // Loads chat messages history and listens for upcoming ones.
 FriendlyChat.prototype.loadMessages = function() {
   // Reference to the /messages/ database path.
