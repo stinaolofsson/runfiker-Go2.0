@@ -6,7 +6,7 @@ angular.module('runFikerGo', ['ngMap'])
     // $scope.mapView =false;
     // $scope.chatView = true;
 
-    $scope.loginView =true;
+    $scope.startView =false;
     $scope.mapView =true;
     $scope.chatView = false;
 
