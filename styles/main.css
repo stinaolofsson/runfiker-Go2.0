@@ -285,6 +285,13 @@ main, #messages-card {
   height: 100%;
   width: 100%;
 }
+#offer-img {
+  position:fixed;
+  z-index: 1000;
+  height: 150px;
+  bottom: 0;
+  right: 0;
+}
 .ng-map-info-window {
   background-color: #fff;
   color: #000;
